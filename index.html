@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FisiCalculo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="icon/calculadora.svg" type="image/x-icon">
+    <script src="js/mate.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div id="tableFracciones">
+            <form action="">
+                <table>
+                    <h1>FRACCIONES</h1>
+                    <tr>
+                        <td>
+                            <label for="">Selecciona una operación</label>
+                        </td>
+                        <td>
+                            <select name="" id="operacion">
+                                <option value="1">➕ Suma</option>
+                                <option value="2">➖ Resta</option>
+                                <option value="3">✖ Multiplicación</option>
+                                <option value="4">➗ División</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <h2>Fracción 1</h2>
+                        </td>
+                        <td>
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="">Numerador</label>
+                        </td>
+                        <td>
+                            <input id="numerador1" type="number">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="">Denominador</label>
+                        </td>
+                        <td>
+                            <input id="denominador1" type="number">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <h2>Fracción 2</h2>
+                        </td>
+                        <td>
+                        
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="">Numerador</label>
+                        </td>
+                        <td>
+                            <input id="numerador2" type="number">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="">Denominador</label>
+                        </td>
+                        <td>
+                            <input id="denominador2" type="number">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input class="buttons" value="C" type="reset"/>
+                        </td>
+                        <td>
+                            <input class="buttons" type="button" onclick="calcularFraccion()" value="=">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="">Resultado</label>
+                        </td>
+                        <td>
+                            <input class="inputResultados" id="totalNumerador" type="text" disabled>
+                            <label for="">/</label>
+                            <input class="inputResultados" id="totalDenominador" type="text" disabled>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+
+                        </td>
+                        <td colspan="2">
+                            <input type="button" value="Simplificar" onclick="simplificarFraccion(document.getElementById('totalNumerador').value, document.getElementById('totalDenominador').value)">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+
+        <div id="tableOtros">
+            <form action="">
+                <table>
+                    <h1>OTROS</h1>
+                    <tr>
+                        <td>
+                            <label for="">Selecciona una opción</label>
+                        </td>
+                        <td>
+                            <select name="" id="opcionOtros">
+                                <option value="1">| m.c.m </option>
+                                <option value="2">| M.C.D </option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <h2>Operación</h2>
+                        </td>
+                        <td>
+                        
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="">Número 1</label>
+                        </td>
+                        <td>
+                            <input id="num1" type="number">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="">Número 2</label>
+                        </td>
+                        <td>
+                            <input id="num2" type="number">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input class="buttons" value="C" type="reset"/>
+                        </td>
+                        <td>
+                            <input class="buttons" type="button" onclick="calcularOtros()" value="=">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="">Resultado</label>
+                        </td>
+                        <td>
+                            <input class="inputResultados" id="totalOtros" type="text" disabled>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>By Juan Gómez</p>
+    </footer>
+</body>
+</html>
